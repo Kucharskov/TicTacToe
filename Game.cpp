@@ -4,8 +4,7 @@ Game::Game(Field f) : _lastPlayer(f) {
 }
 
 bool Game::move(Pos p) {
-	if (!_board.isLegalPos(p)) throw std::invalid_argument("Wrong position to move!");
-	if (!_board.isEmpty(p)) return false;
+	if (!_board.isLegalPos(p) || !_board.isEmpty(p)) return false;
 
 	_board.set(p, getLastPlayer());
 	return true;

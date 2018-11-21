@@ -1,5 +1,4 @@
 #pragma once
-#include <stdexcept>
 #include "Aliases.h"
 #include "Board.h"
 
