@@ -18,7 +18,7 @@ public:
 
 	Field getField(Pos) const;
 	Field getLastPlayer() const { return _lastPlayer; };
-	Result checkWin() const; //Not implemented yet 
+	Result checkWin() const; 
 
 	void draw(); //Deprecated
 };
