@@ -7,7 +7,7 @@
 class Game {
 private:
 	Board _board;
-	Field _lastPlayer;
+	Field _actualPlayer;
 
 public:
 	Game(Field = Field::CIRCLE);
@@ -16,7 +16,7 @@ public:
 	void alternatePlayer();
 
 	Field getField(Pos) const;
-	Field getLastPlayer() const { return _lastPlayer; };
+	Field getActualPlayer() const { return _actualPlayer; };
 	Result checkWin() const; 
 
 	void draw(); //Deprecated

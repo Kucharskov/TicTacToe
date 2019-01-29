@@ -1,17 +1,17 @@
 #include "Game.h"
 
-Game::Game(Field f) : _lastPlayer(f) {
+Game::Game(Field f) : _actualPlayer(f) {
 }
 
 bool Game::move(Pos p) {
 	if (!_board.isLegalPos(p) || !_board.isEmpty(p)) return false;
 
-	_board.set(p, getLastPlayer());
+	_board.set(p, _actualPlayer);
 	return true;
 }
 
 void Game::alternatePlayer() {
-	_lastPlayer = (_lastPlayer == Field::CIRCLE) ? Field::CROSS : Field::CIRCLE;
+	_actualPlayer = (_actualPlayer == Field::CIRCLE) ? Field::CROSS : Field::CIRCLE;
 }
 
 Field Game::getField(Pos p) const {
